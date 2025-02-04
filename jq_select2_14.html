@@ -8,7 +8,12 @@
     <script src="../js/jquery.js"></script>
     <script>
         $(function () {
-            $("#inner_1 p:contains(내용1)").css({"background-color":"#ff0"});
+            // find(".txt1") : 하위요소에서 해당 클래스를 선택
+            $("#inner_1").find(".txt1").css({"background-color":"#ff0"});
+            // 선택한거 없음
+            // $("#inner_1 p").find(".txt2").css({"background-color":"#0ff"});
+            // .filter(".txt2") : inner_1 아이디의 p요소에서 해당 클래스를 선택(하위 선택이 아님)
+            $("#inner_1 p").filter(".txt2").css({"background-color":"#0ff"});
         });
     </script>
 </head>
@@ -20,12 +25,6 @@
             <h2>find(), filter()</h2>
             <p class="txt1">내용1</p>
             <p class="txt2">내용2</p>
-        </section>
-        <section id="inner_2">
-            <h1>not(), end()</h1>
-            <p>내용4</p>
-            <p>내용5</p>
-            <p>내용6</p>
         </section>
     </div>
 </body>
