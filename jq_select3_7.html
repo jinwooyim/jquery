@@ -32,8 +32,15 @@
     <script>
         $(function () {
             var $txt1 = $(".txt_1 span");
+            var $txt2 = $(".txt_2 span");
+            var $box = $(".box");
 
-            $txt1.text("777");
+            var pos_t = $box.position().top;
+            var off_t = $box.offset().top;
+            // box 클래스의 top:50px
+            $txt1.text(pos_t);
+            // #box_wrap 의 margin: 50px + box 클래스의 top: 50px
+            $txt2.text(off_t);
         });
     </script>
 </head>
