@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #FAF3D1;
+        }
+
+        table {
+            width: 96%;
+            padding: 0%;
+            margin: 0%;
+            border: none;
+        }
+
+        .content {
+            margin: -10px;
+            padding: 5px;
+            background-color: #D88E00;
+        }
+
+        .content li {
+            margin-right: 30px;
+            padding: 5px;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        .part1 {
+            width: 96%;
+            padding: 10px;
+            background-color: #E0A800;
+            color: white;
+            text-align: center;
+        }
+
+        .part4_1,
+        .part4_2,
+        .part4_3,
+        .part4_4 {
+            padding: 15px;
+            margin: 15px auto;
+            width: 600px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 1px rgb(209, 209, 209);
+        }
+
+        .info {
+            width: 560px;
+            height: 30px
+        }
+
+        form button,
+        form input {
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+        }
+
+        .part3 {
+            width: 96%;
+            padding: 50px;
+            background-color: #E0A800;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".part4_2").hide();
+            $(".part4_3").hide();
+            $(".part4_4").hide();
+
+            $(".content li:eq(0)").on("click", function () {
+                $(".part4_1").show();
+                $(".part4_2").hide();
+                $(".part4_3").hide();
+                $(".part4_4").hide();
+            })
+            $(".content li:eq(1)").on("click", function () {
+                $(".part4_1").hide();
+                $(".part4_2").show();
+                $(".part4_3").hide();
+                $(".part4_4").hide();
+            })
+            $(".content li:eq(2)").on("click", function () {
+                $(".part4_1").hide();
+                $(".part4_2").hide();
+                $(".part4_3").show();
+                $(".part4_4").hide();
+            })
+            $(".content li:eq(3)").on("click", function () {
+                $(".part4_1").hide();
+                $(".part4_2").hide();
+                $(".part4_3").hide();
+                $(".part4_4").show();
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <header class="part1">
+        <h1>상품 판매</h1>
+        <ul class="content">
+            <li>로그인</li>
+            <li>회원정보</li>
+            <li>상품등록</li>
+            <li>점포등록</li>
+        </ul>
+
+        </table>
+    </header>
+    <section class="part2">
+        <div class="part4_1">
+            <form>
+                <h2>로그인</h2>
+                <p>아이디</p>
+                <input type="text" class="info" clas placeholder="아이디를 입력하세요">
+                <p>아이디</p>
+                <input type="password" class="info" clas placeholder="비밀번호를 입력하세요"><br>
+                <input type="submit" class="button"
+                    style="background-color: #E0A800; color: white ; border: none;border-radius: 10px; margin-top: 20px; width: 580px; height: 30px;"
+                    value="로그인">
+            </form>
+        </div>
+        <div class="part4_2">
+            <form>
+                <h2>회원정보</h2>
+                <p>이름</p>
+                <input type="text" class="info" clas placeholder="이름을 입력하세요">
+                <p>이메일</p>
+                <input type="email" class="info" clas placeholder="이메일을 입력하세요">
+                <p>전화번호</p>
+                <input type="tel" class="info" clas placeholder="전화번호를 입력하세요"><br>
+                <input type="submit" class="button"
+                    style="background-color: #E0A800; color: white ; border: none;border-radius: 10px; margin-top: 20px; width: 580px; height: 30px;"
+                    value="정보수정">
+            </form>
+        </div>
+        <div class="part4_3">
+            <form>
+                <h2>상품 등록</h2>
+                <p>상품명</p>
+                <input type="text" class="info" clas placeholder="상품명을 입력하세요">
+                <p>가격</p>
+                <input type="password" class="info" clas placeholder="상품 가격을 입력하세요"><br>
+                <input type="submit" class="button"
+                    style="background-color: #E0A800; color: white ; border: none;border-radius: 10px; margin-top: 20px; width: 580px; height: 30px;"
+                    value="상품등록">
+            </form>
+        </div>
+        <div class="part4_4">
+            <form>
+                <h2>점포명</h2>
+                <p>점포명</p>
+                <input type="text" class="info" clas placeholder="점포명을 입력하세요">
+                <p>위치</p>
+                <input type="password" class="info" clas placeholder="위치를 입력하세요"><br>
+                <input type="submit" class="button"
+                    style="background-color: #E0A800; color: white ; border: none;border-radius: 10px; margin-top: 20px; width: 580px; height: 30px;"
+                    value="점포등록">
+            </form>
+        </div>
+    </section>
+
+    <footer class="part3">
+        &copy;&nbsp; 2025 상품 판매
+    </footer>
+</body>
+
+</html>

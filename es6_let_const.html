@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var 는 전역 지역 구분이 없음.
+        var a = 1;
+        {
+            var a = 2;
+            var b = 3;
+        }
+        var a = 3;
+        // 1 -> 2
+        // 2 -> 3
+        console.log("!@# a=>"+a);
+        console.log("!@# b=>"+b);
+        
+        let aa = 1; // 전역 변수
+        {
+            let aa = 2; // 지역 변수
+            let bb = 3; // 지역 변수
+            console.log("!@# bb=>"+bb); // 정상
+        }
+        // 1 -> 1
+        console.log("!@# aa=>"+aa); // 전역 변수
+        // console.log("!@# bb=>"+bb); // 오류(지역 변수)
+        
+        const x = 1;
+        // x = 2; // Assignment to constant variable.(재할당이 안됨) : 오류
+        console.log("!@# x=>"+x);
+
+        const employee = {name:"hong", age : 24};
+        // employee{}; //{}; 오류 (객체는 변경 불가)
+        // employee.name = "kim"; // 속성의 값은 변경 가능
+        console.log(employee);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
